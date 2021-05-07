@@ -11,4 +11,3 @@ type Two struct {
 type Three struct {
 	BaseInfo
 }
-
