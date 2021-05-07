@@ -1,10 +1,9 @@
 package simple
 
 type BaseInfo struct {
-	name string
+	Name string
 }
 
 func (b BaseInfo) GetName() string {
-	return b.name
+	return b.Name
 }
-
