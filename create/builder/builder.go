@@ -7,6 +7,9 @@ type DataBuilder struct {
 	_C float64
 }
 
+func NewBuilder() *DataBuilder {
+	return &DataBuilder{}
+}
 func (b *DataBuilder) A(a int) *DataBuilder {
 	b._A = a
 	return b
@@ -22,7 +25,7 @@ func (b *DataBuilder) C(data float64) *DataBuilder {
 	return b
 }
 
-func (b DataBuilder) build() Data {
+func (b DataBuilder) Build() Data {
 	return Data{
 		A: b._A,
 		B: b._B,

@@ -1,6 +1,7 @@
 package main
 
 import (
+	"design-pattern-go/create/builder"
 	"design-pattern-go/create/factory/simple"
 	"fmt"
 	"reflect"
@@ -17,4 +18,12 @@ func main() {
 			fmt.Printf(" %s %s \n", ct.Type(), ct)
 		}
 	}
+
+	d := builder.NewBuilder().
+		A(2).
+		B("b").
+		C(2.3).
+		Build()
+	newD := d
+	fmt.Printf(" %t ", &newD == &d)
 }
